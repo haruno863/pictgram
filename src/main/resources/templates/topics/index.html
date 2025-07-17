@@ -53,6 +53,10 @@
 								class="icon" th:data-_csrf="${_csrf.token}">
 								<img src="/images/icons/comment.png" th:src="@{/images/icons/comment.png}" />
 							</a>
+							<!-- ▼ 追加：CSVダウンロードボタン -->
+							<a href="/topics/topic.csv" th:href="@{/topics/topic.csv}" class="icon" title="CSVダウンロード">
+							    <img src="/images/icons/download.png" th:src="@{/images/icons/download.png}" alt="CSVダウンロード" />
+							</a>
 						</div>
 						<pre class="description" th:text="${topic.description}"></pre>
 						<div style="height: 320px" th:if="${topic.latitude != null and topic.longitude != null}">
