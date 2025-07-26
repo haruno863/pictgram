@@ -1,31 +1,215 @@
 <!DOCTYPE html>
-<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<html lang="ja" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
 
-	<head>
-	    <meta charset="UTF-8">
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-		<link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}">
-		<link rel="stylesheet" href="/css/bootstrap-social.css" th:href="@{/css/bootstrap-social.css}">
-		<title>Pictgram</title>
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="/css/style.css" th:href="@{/css/style.css}">
+	<link rel="stylesheet" href="/css/bootstrap-social.css" th:href="@{/css/bootstrap-social.css}">
+	<title>Pictgram</title>
+</head>
 
-	<body>
-		<div th:if="${hasMessage}" class="alert alert-dismissible fade show" th:classappend="${class}" role='alert'>
-		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><span th:text="${message}"></span>
+<body>
+	<div th:if="${hasMessage}" class="alert alert-dismissible fade show" th:classappend="${class}" role='alert'>
+		<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button><span
+			th:text="${message}"></span>
+	</div>
+	<nav layout:replace="~{layouts/common :: nav}"></nav>
+	<div layout:fragment="contents"></div>
+	<footer class="footer" th:if="${hasFooter}">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<div style="
+				          border:1px solid #95a5a6;
+				          border-radius:.75rem;
+				          background-color:#FFFFFF;
+				          width:280px;
+				          margin:0px;
+				          padding:5px;
+				          text-align:center;
+				          overflow:hidden;
+				        ">
+									<table>
+										<tr>
+											<td style="width:128px">
+												<a href="https://hb.afl.rakuten.co.jp/ichiba/4ab6ba86.b74c34ba.4ab6ba87.f98d73a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsoasisshop%2Fgs-lady-0002%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D"
+													target="_blank" rel="nofollow sponsored noopener"
+													style="word-wrap:break-word;">
+													<img src="https://hbb.afl.rakuten.co.jp/hgb/4ab6ba86.b74c34ba.4ab6ba87.f98d73a6/?me_id=1426418&amp;item_id=10000032&amp;pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fsoasisshop%2Fcabinet%2Flady%2Flady_000%2Flady-0002_00.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
+														border="0" style="margin:2px"
+														alt="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]"
+														title="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]">
+												</a>
+											</td>
+											<td style="vertical-align:top; width:136px; display:block;">
+												<p style="
+				                  font-size:12px;
+				                  line-height:1.4em;
+				                  text-align:left;
+				                  margin:0px;
+				                  padding:2px 6px;
+				                  word-wrap:break-word;
+				                ">
+													<a href="https://hb.afl.rakuten.co.jp/ichiba/4ab6ba86.b74c34ba.4ab6ba87.f98d73a6/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsoasisshop%2Fgs-lady-0002%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D"
+														target="_blank" rel="nofollow sponsored noopener"
+														style="word-wrap:break-word;">
+														【最大50%OFFまとめ買い超お得！】 ジュート ハット 帽子 レディース 日よけ帽子 おしゃれ カジュアル シンプル
+														バイザーハット 大きめ 無地 メッシュ ワイヤー バケットハット バケット ブリムハットジュートハット 紫外線対策 日焼け対策
+														紫外線防止グッズ UV対策
+													</a>
+													<br>
+													<span>
+														価格：3,680円（税込、送料無料）
+													</span>
+													<span style="color:#BBB;">
+														(2025/7/26時点)
+													</span>
+												</p>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<br>
+								<p
+									style="color:#000000; font-size:12px; line-height:1.4em; margin:5px; word-wrap:break-word;">
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-md-4">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<div style="
+				          border: 1px solid #95a5a6;
+				          border-radius: .75rem;
+				          background-color: #FFFFFF;
+				          width: 280px;
+				          margin: 0;
+				          padding: 5px;
+				          text-align: center;
+				          overflow: hidden;
+				        ">
+									<table>
+										<tr>
+											<td style="width: 128px;">
+												<a href="https://hb.afl.rakuten.co.jp/ichiba/4ab6c911.304b57e6.4ab6c912.52d2b280/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flifelivecmz%2Ffb-gds-0099%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D"
+													target="_blank" rel="nofollow sponsored noopener"
+													style="word-wrap:break-word;">
+													<img src="https://hbb.afl.rakuten.co.jp/hgb/4ab6c911.304b57e6.4ab6c912.52d2b280/?me_id=1421088&item_id=10000179&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Flifelivecmz%2Fcabinet%2Fgds%2Fgds_009%2Fgds-0099_00.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
+														border="0" style="margin:2px"
+														alt="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]"
+														title="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]">
+												</a>
+											</td>
+											<td style="vertical-align: top; width: 136px; display: block;">
+												<p style="
+				                  font-size: 12px;
+				                  line-height: 1.4em;
+				                  text-align: left;
+				                  margin: 0;
+				                  padding: 2px 6px;
+				                  word-wrap: break-word;
+				                ">
+													<a href="https://hb.afl.rakuten.co.jp/ichiba/4ab6c911.304b57e6.4ab6c912.52d2b280/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Flifelivecmz%2Ffb-gds-0099%2F&link_type=picttext..."
+														target="_blank" rel="nofollow sponsored noopener"
+														style="word-wrap: break-word;">
+														【枚数限定→MAX50%OFFクーポン】 折りたたみ傘 軽量 日傘 折りたたみ 完全遮光 レディース ワンタッチ自動開閉
+														UVカット ワンタッチ uv 最新超軽素材 軽い 折りたたみ日傘 紫外線対策 超軽量 撥水 遮光100 晴雨兼用 長傘
+														遮光率100% コンパクト UVカット率99％
+													</a><br>
+													<span>価格：3,080円～（税込、送料無料）</span>
+													<span style="color: #BBB;">(2025/7/26時点)</span>
+												</p>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<br>
+								<p
+									style="color: #000; font-size: 12px; line-height: 1.4em; margin: 5px; word-wrap: break-word;">
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<div class="col-md-4">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<div
+									style="border:1px solid #95a5a6;border-radius:.75rem;background-color:#FFFFFF;width:280px;margin:0px;padding:5px;text-align:center;overflow:hidden;">
+									<table>
+										<tr>
+											<td style="width:128px"><a
+													href="https://hb.afl.rakuten.co.jp/ichiba/4ab6cbb5.947c8061.4ab6cbb6.6d16d5fa/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsantemina%2Fsa%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D"
+													target="_blank" rel="nofollow sponsored noopener"
+													style="word-wrap:break-word;">
+													<img src="https://hbb.afl.rakuten.co.jp/hgb/4ab6cbb5.947c8061.4ab6cbb6.6d16d5fa/?me_id=1410556&item_id=10000118&pc=https%3A%2F%2Fthumbnail.image.rakuten.co.jp%2F%400_mall%2Fsantemina%2Fcabinet%2Fthumb%2Fnormal%2Fimgrc0106863528.jpg%3F_ex%3D128x128&s=128x128&t=picttext"
+														border="0" style="margin:2px"
+														alt="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]"
+														title="[商品価格に関しましては、リンクが作成された時点と現時点で情報が変更されている場合がございます。]"></a>
+											</td>
+											<td style="vertical-align:top;width:136px;display: block;">
+												<p
+													style="font-size:12px;line-height:1.4em;text-align:left;margin:0px;padding:2px 6px;word-wrap:break-word">
+													<a href="https://hb.afl.rakuten.co.jp/ichiba/4ab6cbb5.947c8061.4ab6cbb6.6d16d5fa/?pc=https%3A%2F%2Fitem.rakuten.co.jp%2Fsantemina%2Fsa%2F&link_type=picttext&ut=eyJwYWdlIjoiaXRlbSIsInR5cGUiOiJwaWN0dGV4dCIsInNpemUiOiIxMjh4MTI4IiwibmFtIjoxLCJuYW1wIjoicmlnaHQiLCJjb20iOjEsImNvbXAiOiJkb3duIiwicHJpY2UiOjEsImJvciI6MSwiY29sIjoxLCJiYnRuIjoxLCJwcm9kIjowLCJhbXAiOmZhbHNlfQ%3D%3D"
+														target="_blank" rel="nofollow sponsored noopener"
+														style="word-wrap:break-word;">
+														サラリノ 制汗剤 デオドラント 脇 多汗症 手汗止め 塩化アルミニウム液 塩化アルミニウム 汗止め 無香料 脇汗 足汗 手汗
+														メンズ レディース 日本製 SARALINO
+													</a>
+													<br>
+													<span>価格：2,480円（税込、送料無料)
+
+													</span>
+													<span style="color:#BBB">(2025/7/26時点)
+
+													</span>
+												</p>
+											</td>
+										</tr>
+									</table>
+								</div>
+								<br>
+								<p
+									style="color:#000000;font-size:12px;line-height:1.4em;margin:5px;word-wrap:break-word">
+								</p>
+							</td>
+						</tr>
+					</table>
+				</div>
+				<br>
+				<p style="color: #000000; font-size: 12px; line-height: 1.4em; margin: 5px; word-wrap: break-word;">
+				</p>
+				</td>
+				</tr>
+				</table>
+			</div>
 		</div>
-	    <nav layout:replace="~{layouts/common :: nav}"></nav>
-	    <div layout:fragment="contents"></div>
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-		<script src="/scripts/method-convert.js" th:src="@{/scripts/method-convert.js}"></script>
-		<script>
-		    $(function(){
-				convertMethod('.convert');
-		        $(".alert").fadeOut(5000);
-		    });
-	    </script>
-	</body>
-	
+		</div>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="/scripts/method-convert.js" th:src="@{/scripts/method-convert.js}"></script>
+	<script>
+		$(function () {
+			convertMethod('.convert');
+			$(".alert").fadeOut(5000);
+		});
+	</script>
+</body>
+
 </html>
