@@ -29,4 +29,6 @@ spring:
 image:
   local: true
 googlemap:
-  key: ${googlemap.key}  
+  key: ${googlemap.key}
+onesignal:
+  id: ${onesignal.id}
