@@ -1,0 +1,34 @@
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+    servlet:
+      multipart:
+        max-file-size: 20MB
+        max-request-size: 20MB
+  jpa:
+     database: POSTGRESQL 
+  datasource:
+     driverClassName: org.postgresql.Driver
+     url: jdbc:postgresql://localhost:5432/pictgram
+     username: pictgram
+     password: password             
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: ${google.client.id}
+            client-secret: ${google.client.secret}
+          github:
+            clientId: ${github.client.id}
+            clientSecret: ${github.client.secret}
+  thymeleaf:
+    check-template-location: false                   
+image:
+  local: true
+googlemap:
+  key: ${googlemap.key}
+onesignal:
+  id: ${onesignal.id}
